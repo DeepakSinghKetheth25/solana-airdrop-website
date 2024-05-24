@@ -4,15 +4,17 @@ const { Connection, Keypair, PublicKey, LAMPORTS_PER_SOL, clusterApiUrl } = SOLA
 const express = require('express')
 const app = express()
 const path = require('path')
-const port = 3000
+const port = process.env.PORT || 3000
 
-app.use(express.static('public'))
+// app.use(express.static('public'))
+app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.urlencoded());
 app.use(express.json()); // This line is crucial for parsing JSON bodies sent via POST requests.
 
 
 app.get('/', (req, res) => {
-    res.sendFile('index.html', { root: __dirname });
+    // res.sendFile('index.html', { root: __dirname });
+    res.sendFile(path.join(__dirname, 'public', 'index.html'));
 })
 
 app.listen(port, () => {
