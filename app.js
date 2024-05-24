@@ -14,7 +14,7 @@ app.use(express.json()); // This line is crucial for parsing JSON bodies sent vi
 
 app.get('/', (req, res) => {
     // res.sendFile('index.html', { root: __dirname });
-    res.sendFile(path.join(__dirname, 'public', 'index.html'));
+    res.sendFile(path.join(__dirname, 'index.html'));
 })
 
 app.listen(port, () => {
