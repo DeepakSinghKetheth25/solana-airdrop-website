@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/script.js"></script>
+    <title>Airsol Token Airdrop</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+
+    <div class="background">
+
+        <div class="header-container">
+            <h1>AIRSOL - Solana Airdrop</h1>
+            <p>
+                A simple tool to fund your DEVNET wallets
+            </p>
+        </div>
+
+        <div id="container">
+
+            <!-- First row for wallet address input and add button -->
+            <div class="first-row row">
+                <label for="walletAddress">Wallet Address:</label>
+                <input type="text" id="walletAddress" name="walletAddress" placeholder="Enter wallet address">
+                <button id="addButton" onclick="addAddress()">Add</button>
+                <button id="clearButton" onclick="clearAddress()">Clear</button>
+            </div>
+
+            <div class="row">
+                <label for="tokenQuantity">Token Quantity:</label>
+                <input type="number" id="tokenQuantity" name="tokenQuantity" placeholder="Token Quantity">
+
+                <label for="network">Select Network:</label>
+                <select id="network" name="network">
+                    <option value="devnet">Devnet</option>
+                    <option value="testnet">Testnet</option>
+                    <option value="mainnet">Mainnet</option>
+                </select>
+            </div>
+
+            <!-- Text area for displaying added addresses -->
+            <textarea id="addressList" readonly></textarea>
+
+            <!-- Second row for network selection, file upload, and airdrop button -->
+            <!-- <div class="row">
+
+                <label for="csvUpload">Upload CSV file for multiple addresses:</label>
+                <input type="file" id="csvUpload" name="csvUpload" accept=".csv">
+
+            </div>         -->
+
+            <div class="row">
+                <button id="airdropButton" onclick="airdropSolana()">Start Airdrop</button>
+            </div>
+        </div>
+
+        <div id="popupModal">
+            <div class="popupModalContent">
+                <h2 id="popupTitle">Processing...</h2>
+                <div id="spinner" style="display:none;"><i class="fas fa-spinner fa-spin"></i></div>
+                <p id="popupMessage"></p>
+                <button class="closePopUpButton" onclick="closePopup()">Close</button>
+            </div>
+        </div>        
+
+    </div>
+
+
+</body>
+
+</html>
