@@ -50,6 +50,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-bottom: 20px;
 }
 
 .first-row {
@@ -134,6 +135,38 @@ button {
 
 }
 
+.footer-container {
+    width: 28%;
+    color: #ebebeb;
+    background-color: #000000;
+    opacity: 0.92;
+    padding: 20px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    border-radius: 8px;
+    border: 1px solid #c94811;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-content {
+    color: #ebebeb;
+    flex-direction: row;
+}
+
+.footer-content > p {
+    color: #ebebeb;
+    display:inline;
+    font-size: 18px;
+    align-items: center;
+}
+
+.footer-content > a {
+    color: #ebebeb;
+    margin-left: 16px;
+    font-size: 20px;
+}
+
 #popupModal {
     display:none; 
     position:fixed; 
@@ -203,7 +236,7 @@ label {
 
 /* Responsive styles for tablets */
 @media (max-width: 768px) {
-    .header-container, #container {
+    .header-container, .footer-container, #container {
         width: 90%; /* Increase width for smaller devices */
     }
 
