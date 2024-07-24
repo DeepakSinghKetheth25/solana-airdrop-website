@@ -103,7 +103,7 @@ select[name = "network"] {
 textarea {
     min-width: 80%; 
     max-width: 80%;
-    min-height: 30%;
+    min-height: 25%;
     max-height: 40%;
     margin: 20px 0; 
     padding: 10px;
