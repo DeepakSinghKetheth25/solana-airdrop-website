@@ -115,10 +115,10 @@ textarea {
 button {
     background-color: #c94811; 
     color: #ffffff;
-    width: 8%;
+    width: 9%;
     height: 65%; 
-    font-size: 18px;
-    margin-left: 2px; 
+    font-size: 1em;
+    margin: 2px; 
     
     border-radius: 5px;
     border: none;
@@ -129,7 +129,7 @@ button {
 
     width: 20%;
     height: 100%;
-    padding: 15px;
+    padding: 10px;
     margin: 0 auto;
     display: block;
 
@@ -234,6 +234,25 @@ label {
 
 /* Base styles here */
 
+@media (max-width: 1031px) {
+    .header-container, .footer-container, #container {
+        width: 90%; /* Increase width for smaller devices */
+        padding: 10px;
+    }
+
+    .row {
+        margin: 5px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;        
+    }
+
+    input[type="text"], input[type="number"], input[type="file"], select, textarea, button, #airdropButton {
+        width: 100%; /* Full width for smaller inputs and buttons */
+        padding : 10px;
+    }
+}
+
 /* Responsive styles for tablets */
 @media (max-width: 768px) {
     .header-container, .footer-container, #container {
@@ -247,9 +266,14 @@ label {
 
 /* Responsive styles for mobile phones */
 @media (max-width: 480px) {
-    .header-container, #container {
+    .header-container, .footer-container, #container {
         width: 100%; /* Full width for very small devices */
-        padding: 10px; /* Reduce padding */
+        /* padding: 10px;  */
+        /* Reduce padding */
+    }
+
+    #airdropButton {
+        width:80%
     }
 
     input[type="text"], input[type="number"], input[type="file"], select, textarea, button {
