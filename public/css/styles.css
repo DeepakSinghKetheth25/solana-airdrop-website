@@ -103,7 +103,7 @@ select[name = "network"] {
 textarea {
     min-width: 80%; 
     max-width: 80%;
-    min-height: 40%;
+    min-height: 30%;
     max-height: 40%;
     margin: 20px 0; 
     padding: 10px;
@@ -237,19 +237,19 @@ label {
 @media (max-width: 1031px) {
     .header-container, .footer-container, #container {
         width: 90%; /* Increase width for smaller devices */
-        padding: 10px;
+        padding: 8px;
     }
 
     .row {
-        margin: 5px;
+        margin: 3px;
         display: flex;
         flex-direction: column;
         align-items: center;        
     }
 
-    input[type="text"], input[type="number"], input[type="file"], select, textarea, button, #airdropButton {
+    input[type="text"], input[type="number"], input[type="file"], select, textarea, button, #network, #airdropButton {
         width: 100%; /* Full width for smaller inputs and buttons */
-        padding : 10px;
+        padding : 8px;
     }
 }
 
@@ -259,22 +259,27 @@ label {
         width: 90%; /* Increase width for smaller devices */
     }
 
-    input[type="text"], input[type="number"], input[type="file"], select, textarea, button {
+    input[type="text"], input[type="number"], input[type="file"], select, textarea, button, #network {
         width: 100%; /* Full width for smaller inputs and buttons */
     }
+/* 
+    textarea {
+        rows : 3;
+        columns: ;
+    } */
 }
 
 /* Responsive styles for mobile phones */
 @media (max-width: 480px) {
     .header-container, .footer-container, #container {
-        width: 100%; /* Full width for very small devices */
+        width: 90%; /* Full width for very small devices */
         /* padding: 10px;  */
         /* Reduce padding */
     }
 
-    #airdropButton {
+    /* #airdropButton {
         width:80%
-    }
+    } */
 
     input[type="text"], input[type="number"], input[type="file"], select, textarea, button {
         font-size: 14px; /* Smaller font size for better readability */
