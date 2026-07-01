@@ -11,7 +11,7 @@ AIRSOL is a streamlined web application designed to facilitate the airdropping o
 - **User Interface**: Clean and intuitive web interface.
 - **Status Updates**: Real-time updates on the airdrop process.
 
-## Prerequisites
+## Prerequisites 
 
 You need to have the following installed to use AIRSOL:
 - Node.js (v14 or newer)
